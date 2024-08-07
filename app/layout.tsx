@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
+import { Outfit } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'The Jobless Club',
@@ -12,6 +13,17 @@ export const metadata: Metadata = {
   },
 };
 
+const monument = localFont({
+  variable: '--font-monument',
+  src: [
+    {
+      path: '../fonts/MonumentExtended-Ultrabold.otf',
+      weight: '900',
+      style: 'black',
+    },
+  ],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${monument.variable} ${outfit.className}`}>{children}</body>
     </html>
   );
 }
