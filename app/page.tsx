@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='flex flex-col lg:flex-row mx-auto'>
-      <div className='flex flex-col shrink-0 lg:w-[400px] xl:w-[500px] p-8 py-12 lg:p-12'>
+    <div className='flex flex-col lg:flex-row mx-auto bg-primary'>
+      <div className='bg-white flex flex-col shrink-0 lg:w-[400px] xl:w-[500px] p-8 py-12 lg:p-12'>
         <div className='lg:grow lg:pt-24 space-y-8 lg:space-y-10'>
           <Image src='/images/logo.png' width={300} height={200} alt='logo' className='mx-auto' priority />
           <p className='text-center max-w-lg mx-auto'>
@@ -24,6 +24,7 @@ export default function Home() {
                 height={32}
                 alt='fire'
                 className='absolute right-0 translate-x-1/2 bottom-1/4'
+                priority
               />
             </div>
           </div>
@@ -89,6 +90,7 @@ export default function Home() {
                 height={40}
                 alt='logo'
                 className='absolute -right-4 -top-4'
+                priority
               />
               <p className='text-sm'>Joseph</p>
             </Link>
@@ -100,6 +102,7 @@ export default function Home() {
                 height={40}
                 alt='logo'
                 className='absolute -right-4 -top-4'
+                priority
               />
               <p className='text-sm'>Sean</p>
             </Link>
@@ -114,6 +117,7 @@ export default function Home() {
                 height={40}
                 alt='logo'
                 className='absolute -right-4 -top-4'
+                priority
               />
               <p className='text-sm'>Jonas</p>
             </Link>
