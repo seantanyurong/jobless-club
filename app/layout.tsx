@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'The Jobless Club',
-  description: 'We help telegram communities engage members by matching them for 1:1 chats.',
+  description: 'Just 3 Singaporean boys trying to make 60k MMR so they can retire in the mountains of Thailand.',
   icons: {
     icon: '/favicon/favicon.ico',
   },
