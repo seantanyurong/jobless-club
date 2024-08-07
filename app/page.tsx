@@ -9,13 +9,24 @@ export default function Home() {
   return (
     <div className='flex flex-col lg:flex-row mx-auto'>
       <div className='flex flex-col shrink-0 lg:w-[400px] xl:w-[500px] p-8 py-12 lg:p-12'>
-        <div className='lg:grow lg:pt-24 space-y-4 lg:space-y-8'>
-          <Image src='/images/logo.png' width={300} height={200} alt='logo' className='mx-auto mb-8' priority />
+        <div className='lg:grow lg:pt-24 space-y-8 lg:space-y-10'>
+          <Image src='/images/logo.png' width={300} height={200} alt='logo' className='mx-auto' priority />
           <p className='text-center max-w-lg mx-auto'>
             <Balancer>
               Just 3 Singaporean boys trying to make 60k MMR so they can retire in the mountains of Thailand.
             </Balancer>
           </p>
+          <div className='w-full bg-secondary rounded-full translate-y-1/2 p-1'>
+            <div className='relative bg-primary text-xs md:text-sm font-semibold text-white text-center p-3 leading-none rounded-full w-[15%]'>
+              <Image
+                src='/images/fire-drawing.png'
+                width={32}
+                height={32}
+                alt='fire'
+                className='absolute right-0 translate-x-1/2 bottom-1/4'
+              />
+            </div>
+          </div>
           <div className='flex items-center justify-center space-x-12'>
             <Link href={'https://www.tiktok.com/@thejoblessclub?_t=8oeLDQhDjdm'}>
               <svg
