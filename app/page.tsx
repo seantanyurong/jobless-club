@@ -245,20 +245,20 @@ export default function Home() {
                 <h3 className='font-black text-base lg:text-3xl'>Donna</h3>
                 <div className='bg-white rounded-full px-1 py-1 pl-5 relative block lg:hidden ml-auto'>
                   <Image
-                    src='/images/fire-drawing.png'
+                    src='/images/grave-drawing.png'
                     width={15}
                     height={15}
-                    alt='fire'
+                    alt='grave'
                     className='absolute left-2 top-1/2 -translate-y-1/2'
                   />
                   <p className='text-xs font-semibold w-[65px] text-center'>Archived</p>
                 </div>
                 <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
                   <Image
-                    src='/images/fire-drawing.png'
+                    src='/images/grave-drawing.png'
                     width={35}
                     height={35}
-                    alt='fire'
+                    alt='grave'
                     className='absolute left-3 top-1/2 -translate-y-1/2'
                   />
                   <p className='text-sm font-semibold w-[80px] text-center'>Archived</p>
@@ -290,20 +290,20 @@ export default function Home() {
                 <h3 className='font-black text-sm lg:text-3xl'>100DAY$ Challenge</h3>
                 <div className='bg-white rounded-full px-1 py-1 pl-5 relative block lg:hidden ml-auto'>
                   <Image
-                    src='/images/fire-drawing.png'
+                    src='/images/grave-drawing.png'
                     width={15}
                     height={15}
-                    alt='fire'
+                    alt='grave'
                     className='absolute left-2 top-1/2 -translate-y-1/2'
                   />
                   <p className='text-xs font-semibold w-[65px] text-center'>Archived</p>
                 </div>
                 <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
                   <Image
-                    src='/images/fire-drawing.png'
+                    src='/images/grave-drawing.png'
                     width={35}
                     height={35}
-                    alt='fire'
+                    alt='grave'
                     className='absolute left-3 top-1/2 -translate-y-1/2'
                   />
                   <p className='text-sm font-semibold w-[80px] text-center'>Archived</p>
