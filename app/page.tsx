@@ -182,6 +182,50 @@ export default function Home() {
             </a>
           </li>
           <li className='bg-secondary hover:bg-zinc-100 hover:scale-[1.01] duration-200 rounded-lg w-full p-4 lg:p-6 cursor-pointer'>
+            <a href='https://www.sharpknifesg.com/' target='_blank'>
+              <div className='flex items-center mb-2'>
+                <Image
+                  src='/images/sharp-knife-club.png'
+                  width={25}
+                  height={25}
+                  alt='100 club logo'
+                  className='block lg:hidden mr-2'
+                />
+                <Image
+                  src='/images/sharp-knife-club.png'
+                  width={50}
+                  height={50}
+                  alt='100 club logo'
+                  className='hidden lg:block mr-4'
+                />
+                <h3 className='font-black text-base lg:text-3xl'>Sharp Knife Club</h3>
+                <div className='bg-white rounded-full px-1 py-1 pl-5 relative block lg:hidden ml-auto'>
+                  <Image
+                    src='/images/fire-drawing.png'
+                    width={15}
+                    height={15}
+                    alt='fire'
+                    className='absolute left-2 top-1/2 -translate-y-1/2'
+                  />
+                  <p className='text-xs font-semibold w-[65px] text-center'>Building</p>
+                </div>
+                <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
+                  <Image
+                    src='/images/fire-drawing.png'
+                    width={35}
+                    height={35}
+                    alt='fire'
+                    className='absolute left-3 top-1/2 -translate-y-1/2'
+                  />
+                  <p className='text-sm font-semibold w-[80px] text-center'>Building</p>
+                </div>
+              </div>
+              <p className='text-xs lg:text-base'>
+                A professional pick-up knife sharpening service for chefs and homecooks in Singapore.
+              </p>
+            </a>
+          </li>
+          <li className='bg-secondary hover:bg-zinc-100 hover:scale-[1.01] duration-200 rounded-lg w-full p-4 lg:p-6 cursor-pointer'>
             <a href='https://www.tehpengclub.com/' target='_blank'>
               <div className='flex items-center mb-2'>
                 <Image
@@ -318,8 +362,8 @@ export default function Home() {
         </ul>
         <Image
           src='/images/team-drawing.png'
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           alt='team'
           className='hidden absolute bottom-0 right-0 lg:block z-20'
         />
