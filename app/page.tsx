@@ -207,7 +207,7 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-2 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-xs font-semibold w-[65px] text-center'>$1,825</p>
+                  <p className='text-xs font-semibold w-[65px] text-center'>$2,365</p>
                 </div>
                 <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
                   <Image
@@ -217,7 +217,7 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-3 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-sm font-semibold w-[80px] text-center'>$1,825</p>
+                  <p className='text-sm font-semibold w-[80px] text-center'>$2,365</p>
                 </div>
               </div>
               <p className='text-xs lg:text-base'>
