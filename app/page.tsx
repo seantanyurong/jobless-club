@@ -13,7 +13,7 @@ export default function Home() {
           <Image src='/images/logo.png' width={300} height={200} alt='logo' className='mx-auto' priority />
           <p className='text-center max-w-lg mx-auto'>
             <Balancer>
-              Just 3 Singaporean boys trying to make 60k MMR so they can retire in the mountains of Thailand.
+              Just 3 Singaporean boys trying to make 30k MMR so they can retire in the mountains of Thailand.
             </Balancer>
           </p>
           <div className='w-full bg-secondary rounded-full translate-y-1/2 p-1'>
@@ -207,7 +207,7 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-2 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-xs font-semibold w-[65px] text-center'>$8,085</p>
+                  <p className='text-xs font-semibold w-[65px] text-center'>$11,794</p>
                 </div>
                 <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
                   <Image
@@ -217,7 +217,7 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-3 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-sm font-semibold w-[80px] text-center'>$8,085</p>
+                  <p className='text-sm font-semibold w-[80px] text-center'>$11,794</p>
                 </div>
               </div>
               <p className='text-xs lg:text-base'>
