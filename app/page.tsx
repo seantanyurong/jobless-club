@@ -2,6 +2,7 @@
 import Balancer from 'react-wrap-balancer';
 import Link from 'next/link';
 import Image from 'next/image';
+import Revenue from './revenue';
 
 // Components
 
@@ -137,51 +138,6 @@ export default function Home() {
       <div className='lg:h-screen lg:overflow-scroll no-scrollbar w-full bg-primary relative'>
         <ul className='space-y-4 p-10'>
           <li className='bg-secondary hover:bg-zinc-100 hover:scale-[1.01] duration-200 rounded-lg w-full p-4 lg:p-6 cursor-pointer'>
-            <a href='https://the100club.io/' target='_blank'>
-              <div className='flex items-center mb-2'>
-                <Image
-                  src='/images/the100club.png'
-                  width={25}
-                  height={25}
-                  alt='100 club logo'
-                  className='block lg:hidden mr-2'
-                />
-                <Image
-                  src='/images/the100club.png'
-                  width={50}
-                  height={50}
-                  alt='100 club logo'
-                  className='hidden lg:block mr-4'
-                />
-                <h3 className='font-black text-base lg:text-3xl'>The 100 Club</h3>
-                <div className='bg-white rounded-full px-1 py-1 pl-5 relative block lg:hidden ml-auto'>
-                  <Image
-                    src='/images/fire-drawing.png'
-                    width={15}
-                    height={15}
-                    alt='fire'
-                    className='absolute left-2 top-1/2 -translate-y-1/2'
-                  />
-                  <p className='text-xs font-semibold w-[65px] text-center'>$16,670</p>
-                </div>
-                <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
-                  <Image
-                    src='/images/fire-drawing.png'
-                    width={35}
-                    height={35}
-                    alt='fire'
-                    className='absolute left-3 top-1/2 -translate-y-1/2'
-                  />
-                  <p className='text-sm font-semibold w-[80px] text-center'>$16,670</p>
-                </div>
-              </div>
-              <p className='text-xs lg:text-base'>
-                A private mastermind community for founders in Singapore. We run monthly casual events, masterminds, and
-                coffee chats for our members.
-              </p>
-            </a>
-          </li>
-          <li className='bg-secondary hover:bg-zinc-100 hover:scale-[1.01] duration-200 rounded-lg w-full p-4 lg:p-6 cursor-pointer'>
             <a href='https://www.sharpknifesg.com/' target='_blank'>
               <div className='flex items-center mb-2'>
                 <Image
@@ -207,7 +163,7 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-2 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-xs font-semibold w-[65px] text-center'>$11,794</p>
+                  <p className='text-xs font-semibold w-[65px] text-center'><Revenue business='kss' /></p>
                 </div>
                 <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
                   <Image
@@ -217,11 +173,56 @@ export default function Home() {
                     alt='fire'
                     className='absolute left-3 top-1/2 -translate-y-1/2'
                   />
-                  <p className='text-sm font-semibold w-[80px] text-center'>$11,794</p>
+                  <p className='text-sm font-semibold w-[80px] text-center'><Revenue business='kss' /></p>
                 </div>
               </div>
               <p className='text-xs lg:text-base'>
                 A professional pick-up knife sharpening service for chefs and homecooks in Singapore.
+              </p>
+            </a>
+          </li>
+          <li className='bg-secondary hover:bg-zinc-100 hover:scale-[1.01] duration-200 rounded-lg w-full p-4 lg:p-6 cursor-pointer'>
+            <a href='https://the100club.io/' target='_blank'>
+              <div className='flex items-center mb-2'>
+                <Image
+                  src='/images/the100club.png'
+                  width={25}
+                  height={25}
+                  alt='100 club logo'
+                  className='block lg:hidden mr-2'
+                />
+                <Image
+                  src='/images/the100club.png'
+                  width={50}
+                  height={50}
+                  alt='100 club logo'
+                  className='hidden lg:block mr-4'
+                />
+                <h3 className='font-black text-base lg:text-3xl'>The 100 Club</h3>
+                <div className='bg-white rounded-full px-1 py-1 pl-5 relative block lg:hidden ml-auto'>
+                  <Image
+                    src='/images/grave-drawing.png'
+                    width={15}
+                    height={15}
+                    alt='grave'
+                    className='absolute left-2 top-1/2 -translate-y-1/2'
+                  />
+                  <p className='text-xs font-semibold w-[65px] text-center'>$16,074</p>
+                </div>
+                <div className='bg-white rounded-full px-2 py-1 pl-12 relative hidden lg:block ml-auto'>
+                  <Image
+                    src='/images/grave-drawing.png'
+                    width={35}
+                    height={35}
+                    alt='grave'
+                    className='absolute left-3 top-1/2 -translate-y-1/2'
+                  />
+                  <p className='text-sm font-semibold w-[80px] text-center'>$16,074</p>
+                </div>
+              </div>
+              <p className='text-xs lg:text-base'>
+                A private mastermind community for founders in Singapore. We run monthly casual events, masterminds, and
+                coffee chats for our members.
               </p>
             </a>
           </li>
