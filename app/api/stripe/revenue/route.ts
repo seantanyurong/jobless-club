@@ -7,12 +7,23 @@ const isBusiness = (k: string): k is Business => k in stripeAll;
 async function getRevenueAllRaw(business: Business) {
   let total = 0;
   const stripe = stripeAll[business];
+  const typeCounts: Record<string, number> = {};
 
-  for await (const charge of stripe.charges.list({ limit: 100 })) {
-    if (charge.status === "succeeded") {
-      total += charge.amount - (charge.amount_refunded || 0);
+  for await (const txn of stripe.balanceTransactions.list({
+    limit: 100
+  })) {
+    // Count transaction types for debugging
+    typeCounts[txn.type] = (typeCounts[txn.type] || 0) + 1;
+
+    // Sum all positive revenue transactions
+    if (txn.type === 'charge' || txn.type === 'payment') {
+      total += txn.net;
     }
   }
+
+  console.log(`[${business}] Transaction types:`, typeCounts);
+  console.log(`[${business}] Total revenue (net):`, total);
+
   return total;
 }
 
