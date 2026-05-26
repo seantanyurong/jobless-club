@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jobless Club
+
+The landing page for [The Jobless Club](https://www.tiktok.com/@thejoblessclub?_t=8oeLDQhDjdm) — just 3 Singaporean boys trying to make 30k MMR so they can retire in the mountains of Thailand.
+
+It introduces the team and showcases the products we're building, with live revenue and traction numbers pulled in for some of them. As featured on [CNA Money Mind](https://www.channelnewsasia.com/watch/money-mind-2026/jobless-club-5789621).
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Stripe](https://stripe.com/) — for live revenue figures
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env.local` file with the Stripe API keys used to fetch live revenue (see [Environment Variables](#environment-variables)):
+
+```bash
+KSS_STRIPE_API_KEY=sk_live_...
+THE100CLUB_STRIPE_API_KEY=sk_live_...
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result. The page auto-updates as you edit `app/page.tsx`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Command         | Description                  |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start the development server |
+| `npm run build` | Build for production         |
+| `npm run start` | Run the production build     |
+| `npm run lint`  | Run ESLint                   |
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Live revenue is fetched per business from Stripe. Each business needs its own API key:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable                    | Used for                    |
+| --------------------------- | --------------------------- |
+| `KSS_STRIPE_API_KEY`        | Knife Sharpening SG revenue |
+| `THE100CLUB_STRIPE_API_KEY` | The 100 Club revenue        |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+These are defined in `lib/stripe.ts` and read via the `requireEnv` helper in `lib/env.ts`, which throws if a key is missing.
 
-## Deploy on Vercel
+## Revenue API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`GET /api/stripe/revenue?business=<key>` returns the net revenue (in cents) for a business by summing its Stripe balance transactions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `business` must be one of the keys defined in `lib/stripe.ts` (`kss`, `the100club`).
+- Responses are cached for 5 minutes (ISR-style via `unstable_cache`, plus a `Cache-Control` header).
+
+The `<Revenue />` client component (`app/revenue.tsx`) consumes this endpoint to display figures on the page.
+
+## Project Structure
+
+```
+app/
+  api/stripe/revenue/route.ts   Revenue endpoint
+  page.tsx                      Landing page
+  revenue.tsx                   Revenue display component
+  layout.tsx                    Root layout
+lib/
+  stripe.ts                     Stripe clients per business
+  env.ts                        Env var helper
+public/images/                  Logos, team photos, drawings
+```
+
+## Deploy
+
+Deployed on [Vercel](https://vercel.com/).
